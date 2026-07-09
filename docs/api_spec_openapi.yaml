@@ -1,0 +1,36 @@
+openapi: 3.0.3
+info:
+  title: Ashkan AI Air Monitor API
+  version: "13.0.0"
+  description: Industrial monitoring API designed by Ashkan Motaei.
+paths:
+  /api/v1/health:
+    get:
+      summary: System health status
+      responses:
+        '200':
+          description: OK
+  /api/v1/stations:
+    get:
+      summary: List monitoring stations
+      responses:
+        '200':
+          description: Station list
+  /api/v1/readings/latest:
+    get:
+      summary: Latest analyzer readings
+      responses:
+        '200':
+          description: Latest readings
+  /api/v1/alarms:
+    get:
+      summary: Active and historical alarms
+      responses:
+        '200':
+          description: Alarm list
+  /api/v1/reports/daily:
+    post:
+      summary: Generate daily compliance report
+      responses:
+        '202':
+          description: Report generation accepted

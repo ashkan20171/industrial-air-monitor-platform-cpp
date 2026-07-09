@@ -1,0 +1,40 @@
+{
+  "profiles": [
+    {
+      "name": "Ecotech O3 Serial",
+      "vendor": "ecotech",
+      "model": "Serinus Template",
+      "connectionType": "serial",
+      "endpoint": "COM3",
+      "baudRate": 9600,
+      "pollCommand": "DATA?\\r\\n"
+    },
+    {
+      "name": "BAM PM Modbus",
+      "vendor": "bam",
+      "model": "BAM Template",
+      "connectionType": "modbus_rtu",
+      "endpoint": "COM4",
+      "baudRate": 9600,
+      "slaveId": 1,
+      "startRegister": 0,
+      "registerCount": 8
+    },
+    {
+      "name": "Horiba NOx Serial",
+      "vendor": "horiba",
+      "model": "APNA Template",
+      "connectionType": "serial",
+      "endpoint": "COM5",
+      "baudRate": 9600,
+      "pollCommand": "MEAS?\\r\\n"
+    },
+    {
+      "name": "Simulator",
+      "vendor": "generic",
+      "model": "virtual",
+      "connectionType": "simulator",
+      "endpoint": "internal"
+    }
+  ]
+}

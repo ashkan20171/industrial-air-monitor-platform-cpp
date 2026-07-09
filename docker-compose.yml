@@ -1,0 +1,15 @@
+services:
+  airmonitor:
+    build: .
+    container_name: ashkan-air-monitor-v12
+    ports:
+      - "8080:8080"
+      - "4840:4840"
+    volumes:
+      - ./data:/app/data
+
+  mqtt:
+    image: eclipse-mosquitto:2
+    container_name: airmonitor-mqtt
+    ports:
+      - "1883:1883"

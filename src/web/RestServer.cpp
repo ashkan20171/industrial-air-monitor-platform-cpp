@@ -1,0 +1,2 @@
+#include "RestServer.h"
+namespace ashkan::web { RestServer::RestServer(int p):m_port(p){} void RestServer::start(){m_running=true;} void RestServer::stop(){m_running=false;} bool RestServer::running() const{return m_running;} std::string RestServer::statusJson() const{return std::string("{\"service\":\"Ashkan V11 REST\",\"running\":")+(m_running?"true":"false")+",\"port\":"+std::to_string(m_port)+"}";} }

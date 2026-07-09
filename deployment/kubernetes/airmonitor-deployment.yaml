@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ashkan-ai-air-monitor
+  labels:
+    app: ashkan-ai-air-monitor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ashkan-ai-air-monitor
+  template:
+    metadata:
+      labels:
+        app: ashkan-ai-air-monitor
+    spec:
+      containers:
+        - name: airmonitor
+          image: ashkan-ai-air-monitor:v13
+          ports:
+            - containerPort: 8080
+            - containerPort: 4840
+          env:
+            - name: APP_AUTHOR
+              value: "Ashkan Motaei"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ashkan-ai-air-monitor
+spec:
+  selector:
+    app: ashkan-ai-air-monitor
+  ports:
+    - name: web
+      port: 8080
+      targetPort: 8080
+    - name: opcua
+      port: 4840
+      targetPort: 4840
