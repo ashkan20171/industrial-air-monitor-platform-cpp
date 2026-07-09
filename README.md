@@ -1,57 +1,135 @@
-# Ashkan AI Air Monitor V13 — Global Industrial Enterprise Platform
+# Industrial Air Monitor Platform — C++/Qt Edition
 
-**Programmer / Author:** Ashkan Motaei
+[![C++](https://img.shields.io/badge/C%2B%2B-17%2F20-blue)](#)
+[![Qt](https://img.shields.io/badge/Qt-6.x-41CD52)](#)
+[![Architecture](https://img.shields.io/badge/Architecture-Industrial%20Enterprise-orange)](#)
+[![Domain](https://img.shields.io/badge/Domain-IIoT%20%7C%20SCADA-informational)](#)
 
-Ashkan AI Air Monitor is a professional C++/Qt industrial environmental monitoring platform designed for SCADA-ready, IoT-ready, AI-assisted and compliance-oriented air quality monitoring deployments.
+Enterprise-grade industrial air monitoring platform built with **C++** and **Qt** for **SCADA-connected**, **IoT-enabled**, and **AI-assisted** environmental monitoring systems.
 
-## What This Project Demonstrates
+This project demonstrates how to design a modular industrial software platform that integrates **analyzer drivers**, **serial/TCP/Modbus communication**, **OPC-UA**, **MQTT telemetry**, **alarm management**, **real-time data pipelines**, **RBAC**, **audit logging**, **compliance-oriented architecture**, and **edge deployment readiness**.
 
-- Industrial C++/Qt software architecture
-- Analyzer driver abstraction for real-world air monitoring devices
-- Serial, TCP and Modbus communication foundations
-- OPC-UA server skeleton for SCADA/HMI integration
-- MQTT bridge for cloud and edge IoT telemetry
-- Alarm lifecycle management
-- Data pipeline and local persistence
-- AI anomaly detection and predictive maintenance concepts
-- RBAC, audit trail and cybersecurity-aware architecture
-- Reporting, validation and compliance documentation
-- Docker, Kubernetes and CI/CD deployment readiness
-- Professional documentation suitable for European technical interviews
+---
 
-## Target Use Cases
+## Why this project stands out
 
-- Factory environmental monitoring
-- Air quality monitoring stations
+This is not a simple desktop app.
+
+It is a portfolio-grade **industrial software platform** designed around patterns used in real-world monitoring, automation, telemetry, and enterprise integration systems.
+
+### It demonstrates:
+- Industrial device integration and protocol abstraction
+- Modular architecture for large-scale maintainable systems
+- Real-time telemetry ingestion and processing
+- SCADA and enterprise interoperability
+- Security-aware design with auditability and access control
+- AI-assisted anomaly detection for operational monitoring
+- Deployment thinking across desktop, edge, Docker, and Kubernetes
+
+---
+
+## Business / Industrial Use Cases
+
+This platform is suitable for scenarios such as:
+
+- Industrial air quality monitoring stations
+- Factory environmental monitoring systems
 - Smart city environmental telemetry
-- Industrial compliance dashboards
-- SCADA/HMI connected analyzer networks
-- Edge gateway for pollutant analyzers
-- Portfolio demonstration for industrial software engineering roles
+- Edge gateways for pollutant analyzers
+- SCADA/HMI-connected analyzer networks
+- Compliance-oriented monitoring dashboards
+- Industrial software engineering portfolio demonstration
 
-## Key Modules
+---
 
+## Core Capabilities
+
+### 1) Industrial Device Connectivity
+Supports analyzer-oriented communication patterns through:
+- Serial communication
+- TCP/IP communication
+- Modbus-based integration
+- Vendor-specific driver abstraction
+
+Implemented driver structure includes components for:
+- BAM analyzers
+- Ecotech analyzers
+- Horiba analyzers
+- ESA analyzers
+- Generic ASCII devices
+
+---
+
+### 2) Real-Time Data Pipeline
+The platform contains a dedicated processing pipeline for:
+- collecting analyzer readings
+- normalizing device output
+- validating measurements
+- forwarding telemetry
+- persisting operational data
+
+This reflects the design of a real industrial ingestion layer rather than a simple UI-driven application.
+
+---
+
+### 3) SCADA and Enterprise Integration
+The project includes enterprise-facing integration building blocks such as:
+- **OPC-UA server** skeleton for SCADA/HMI integration
+- **MQTT client bridge** for telemetry publishing
+- REST and WebSocket interfaces for external consumers
+- extensible integration points for higher-level systems
+
+This is especially important for recruiters looking for engineers with **OT/IT bridging** experience.
+
+---
+
+### 4) AI-Assisted Monitoring
+The platform includes AI/ML-oriented modules for:
+- anomaly detection
+- abnormal trend spotting
+- predictive maintenance direction
+- intelligent monitoring workflows
+
+This makes the project stronger than a standard monitoring application because it connects **industrial software engineering** with **practical AI usage**.
+
+---
+
+### 5) Security and Compliance Awareness
+The architecture also reflects enterprise and industrial security concerns:
+- Role-Based Access Control (**RBAC**)
+- Audit trail / audit logging
+- cybersecurity-oriented design thinking
+- compliance and reporting modules
+- threat-model and industrial documentation support
+
+These are strong signals for recruiters in industrial, enterprise, and regulated environments.
+
+---
+
+## Architecture Overview
+
+The repository is organized into domain-oriented modules:
 ```text
 src/
-├── drivers/           Analyzer-specific drivers
-├── protocols/         Modbus, Serial, TCP communication
-├── pipeline/          Real-time data processing
-├── alerts/            Industrial alarm engine
-├── database/          Persistence layer
-├── integration/       OPC-UA, MQTT and enterprise bridges
-├── security/          RBAC, audit trail and policy concepts
-├── ai/ml/             Anomaly detection and predictive analytics
-├── reporting/         PDF/Excel/CSV reporting abstraction
-├── compliance/        Compliance validation concepts
-├── observability/     Metrics, health and diagnostics
-├── backup/            Backup and restore strategy
-├── digital_twin/      Station/device digital twin model
-└── deployment/        Docker, Kubernetes and infrastructure docs
-```
-
-## Portfolio Pitch
-> Built by Ashkan Motaei, Ashkan AI Air Monitor is a modular C++/Qt industrial air-quality platform featuring analyzer driver abstraction, Modbus/Serial/TCP support, OPC-UA SCADA integration, MQTT telemetry, alarm lifecycle management, RBAC, audit logging, AI anomaly detection, compliance reporting, Docker/Kubernetes deployment assets, and EU-industry-oriented documentation.
-
-## Production Disclaimer
-This repository contains an enterprise-grade architecture and implementation skeleton. Real production deployment must include site-specific validation, certified calibration procedures, actual analyzer protocol verification, cybersecurity hardening, TLS certificates, and acceptance testing.
-"# industrial-air-monitor-platform-cpp" 
+├── ai/                 # AI engine and ML-related processing
+├── alerts/             # Alarm lifecycle and alert handling
+├── backup/             # Backup and recovery support
+├── compliance/         # Compliance-oriented validation/reporting concepts
+├── core/               # Shared domain models and configuration
+├── database/           # Persistence layer
+├── digital_twin/       # Digital twin concepts for monitoring assets
+├── discovery/          # Device scanning and discovery
+├── drivers/            # Analyzer driver abstractions and implementations
+├── edge/               # Edge gateway concepts
+├── integration/        # MQTT / OPC-UA and enterprise connectivity
+├── maintenance/        # Calibration and maintenance monitoring
+├── network/            # Redundancy and network-related support
+├── observability/      # Health checks and metrics
+├── pipeline/           # Real-time data pipeline
+├── plugins/            # Extensibility points
+├── protocols/          # Serial / TCP / Modbus communication
+├── reporting/          # Reporting abstractions
+├── security/           # RBAC and audit trail
+├── simulator/          # Analyzer simulation support
+├── ui/                 # Qt UI components
+└── web/                # REST and WebSocket interfaces
